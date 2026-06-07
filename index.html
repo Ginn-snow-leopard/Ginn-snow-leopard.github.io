@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ginn's Website</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Playwrite FR Moderne",cursive;
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#020024,#090979,#00d4ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Animated stars */
+
+.stars{
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size:70px 70px,120px 120px;
+    background-position:0 0,35px 35px;
+    animation:moveStars 60s linear infinite;
+    opacity:.5;
+}
+
+@keyframes moveStars{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(1000px);
+    }
+}
+
+.card{
+    position:relative;
+    z-index:2;
+    width:min(90%,600px);
+    padding:40px;
+    text-align:center;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:25px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.45);
+}
+
+h1{
+    color:white;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+h2{
+    color:#ffe082;
+    font-size:1.2rem;
+    margin-bottom:35px;
+    line-height:1.6;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+
+    background:linear-gradient(90deg,#00c6ff,#0072ff);
+
+    padding:18px;
+    border-radius:15px;
+
+    font-size:1.2rem;
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+a:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+footer{
+    margin-top:30px;
+    color:white;
+    opacity:.7;
+    font-size:.9rem;
+}
+
+@media(max-width:600px){
+
+h1{
+    font-size:2rem;
+}
+
+h2{
+    font-size:1rem;
+}
+
+a{
+    font-size:1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="card">
+
+<h1>🚀 Ginn's Website</h1>
+
+<h2>
+Hello! My name is Ginn.<br>
+I am 12 years old.<br>
+Welcome to my website!
+</h2>
+
+<div class="buttons">
+
+<a href="https://scratch.mit.edu/users/Darkness2014e/" target="_blank">
+🎨 Scratch
+</a>
+
+<a href="game.html">
+🎮 Space Shooter
+</a>
+
+</div>
+
+<footer>
+Made by Ginn ⭐
+</footer>
+
+</div>
+
+</body>
+</html>

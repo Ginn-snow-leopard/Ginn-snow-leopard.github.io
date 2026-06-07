@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<title>Galaxy Defender</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading">
+    <h1>🚀 Galaxy Defender</h1>
+    <p>Loading...</p>
+</div>
+
+<!-- HUD -->
+<div id="hud">
+
+    <div class="left">
+        ❤️ <span id="lives">3</span>
+    </div>
+
+    <div class="center">
+        ⭐ <span id="score">0</span>
+    </div>
+
+    <div class="right">
+        👾 Level <span id="level">1</span>
+    </div>
+
+</div>
+
+<!-- Game Canvas -->
+<canvas id="game"></canvas>
+
+<!-- Mobile Controls -->
+<div id="controls">
+
+    <div class="move">
+
+        <button id="left">
+            ◀
+        </button>
+
+        <button id="right">
+            ▶
+        </button>
+
+    </div>
+
+    <button id="shoot">
+        🔥
+    </button>
+
+</div>
+
+<!-- Pause Button -->
+<button id="pauseButton">
+⏸
+</button>
+
+<!-- Pause Menu -->
+<div id="pauseMenu" class="hidden">
+
+    <h2>Paused</h2>
+
+    <button id="resumeButton">
+        Resume
+    </button>
+
+</div>
+
+<!-- Game Over -->
+<div id="gameOver" class="hidden">
+
+    <h1>Game Over</h1>
+
+    <p>
+        Final Score:
+        <span id="finalScore">0</span>
+    </p>
+
+    <button onclick="location.reload()">
+        Play Again
+    </button>
+
+    <button onclick="window.location='index.html'">
+        Home
+    </button>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
